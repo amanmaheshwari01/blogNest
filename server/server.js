@@ -9,7 +9,7 @@ const app = express();
 
 await connectDB()
 
-// Middlewares
+// Middlewares      
 app.use(cors())
 app.use(express.json())
 
