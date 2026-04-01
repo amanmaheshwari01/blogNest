@@ -24,7 +24,7 @@ export const AppProvider = ({ children })=>{
             toast.error(error.message)
         }
     }
-
+ 
     useEffect(()=>{
         fetchBlogs();
         const token = localStorage.getItem('token')

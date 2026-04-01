@@ -3,7 +3,7 @@ import { adminLogin, approveCommentById, deleteCommentById, getAllBlogsAdmin, ge
 import auth from "../middleware/auth.js";
 
 const adminRouter = express.Router();
-
+ 
 adminRouter.post("/login", adminLogin);
 adminRouter.get("/comments", auth, getAllComments);
 adminRouter.get("/blogs", auth, getAllBlogsAdmin);

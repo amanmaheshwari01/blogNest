@@ -21,7 +21,7 @@ const CommentTableItem = ({comment, fetchComments}) => {
         }
       } catch (error) {
         toast.error(error.message)
-      }
+      } 
     }
 
     const deleteComment = async () =>{

@@ -22,7 +22,7 @@ const AddBlog = () => {
 
     const generateContent = async ()=>{
         if(!title) return toast.error('Please enter a title')
-
+ 
         try {
             setLoading(true);
             const {data} = await axios.post('/api/blog/generate', {prompt: title})
@@ -62,6 +62,7 @@ const AddBlog = () => {
                 setSubTitle('')
                 quillRef.current.root.innerHTML = ''
                 setCategory('Startup')
+                setIsPublished(false)
             }else{
                 toast.error(data.message)
             }
